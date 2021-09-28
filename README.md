@@ -44,10 +44,10 @@ The information wil NOT be stored on my phone but on the "cloud".
 	- user: alex
 	- pass: al3x
 - You can use whatever web app framework you want for NodeJS (Express is recommended)
-- No need to add certificates or create a production ready applications, as a productt owner I should be able to run both applications on the same network and they should be able to communicate (Specific documentation from your side is needed in order to configure how the mobile app should connect to the nodejs app)
+- No need to add certificates or create a production ready applications, as a product owner I should be able to run both applications on the same network and they should be able to communicate (Specific documentation from your side is needed in order to configure how the mobile app should connect to the nodejs app)
 - Not enforced on this evaluation but gives you extra credits are:
 	- Docker
 	- API Protection strategies
-	- Usage of BloC pattern
+	- Usage of BloC pattern (Or similar state management system)
 
 
