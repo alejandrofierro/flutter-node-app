@@ -1,0 +1,42 @@
+version: "3.8"
+services:
+  db:
+    container_name: app_db
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: "db"
+      MYSQL_USER: "app"
+      # You can use whatever password you like
+      MYSQL_PASSWORD: "app"
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: "app"
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - "3306:3306"
+    expose:
+      # Opens port 3306 on the container
+      - "3306"
+    # Where our data will be persisted
+    volumes:
+      - my-db:/var/lib/mysql
+
+  app:
+    container_name: app
+    build: .
+    restart: always
+    environment:
+      DB_NAME: "db"
+      DB_USER: "app"
+      DB_PASSWORD: "app"
+      DB_HOST: app_db
+      DB_PORT: 3306
+      USER: "alex"
+      PASS: "al3x"
+      USER_ID: "1"
+      SECRETORPRIVATEKEY: "BringIt"
+    ports:
+      - 8000:5555
+
+volumes:
+  my-db:
