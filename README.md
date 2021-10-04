@@ -52,7 +52,7 @@ In case of problems with the Android simulator port, use for API communication:
 #### Modify
 
 ```
-final String _baseUrl = '10.0.2.2:8000';
+final String _baseUrl = 'http://10.0.2.2:8000';
 ```
 
 ---
